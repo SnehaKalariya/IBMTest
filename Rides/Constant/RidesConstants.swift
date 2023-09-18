@@ -7,7 +7,11 @@
 
 import Foundation
 struct RidesConstant{
-    static var baseUrl = "https://random-data-api.com/api/"
+    static let baseUrl = "https://random-data-api.com/api/"
     static var vehicleListUrl = "vehicle/random_vehicle?size="
-    static var apiErrorMsg = "Something went wrong! Please try again later."
+    static let apiErrorMsg = "Something went wrong! Please try again later."
+    static let alertMsg = "Please enter number between 1 to 100"
+    static let carbonEmission = "Estimated Carbon Emmission"
+    static let kmRange = 5000.0
+    static let swipeMsg = "Swipe right to see carbon embission"
 }

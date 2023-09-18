@@ -20,7 +20,7 @@ protocol NetworkService {
 
 class Webservice: NetworkService {
     
-    //MARK: Open Closed (SOLID), Result type
+    //MARK: Open Closed (SOLID), Result type, Generic
     func executeAPI<T:Codable>(urlString:String, completionHandler: @escaping (Result<T, NetworkError>) -> Void){
         let request : URLRequest = self.getAPIRequest(urlString: urlString)
         let session = URLSession.shared
