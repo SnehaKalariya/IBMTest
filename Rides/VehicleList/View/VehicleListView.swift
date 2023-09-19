@@ -25,6 +25,9 @@ struct VehicleListView: View {
                         self.submitAction(num: self.vehicleNumber)
                     }
                     .buttonStyle(.bordered)
+                    .alert(isPresented: $viewModel.showAlert) {
+                        Alert(title: Text(RidesConstant.alertMsg), dismissButton: .default(Text("Got it!")))
+                           }
                 }
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                 if cellList.count != 0{
@@ -49,7 +52,7 @@ struct VehicleListView: View {
                         }
                         
                         List(cellList, id: \.id) { list in
-                            NavigationLink(destination: VehicleDetailView(vehicleList: .constant(list))) {
+                            NavigationLink(destination: VehicleDetailView(vehicleList: .constant(list)).environmentObject(VehicleDetailViewModel())) {
                                 VehicleListCell(cellItem: list)
                                     .frame(height: 50)
                             }

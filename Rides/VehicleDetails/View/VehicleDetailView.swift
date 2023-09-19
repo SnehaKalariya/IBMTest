@@ -9,57 +9,30 @@ import SwiftUI
 
 struct VehicleDetailView: View {
     @Binding var vehicleList : VehicleListResponse
+    @EnvironmentObject var viewModel : VehicleDetailViewModel
+    @State private var currentPage = 0
     
+    //MARK: Implemented Paging for swiping
     var body: some View {
-        VStack(spacing:40){
+        VStack(spacing:20){
             Text("Car Details")
                 .fontWeight(.bold)
                 .foregroundColor(.blue)
                 .font(.system(size: 28))
-            HStack(spacing: 10){
-                Text("Vin:")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
-                Text(vehicleList.vin ?? "")
-                    .font(.system(size: 20))
-                Spacer()
-            }
-            HStack(spacing: 10){
-                
-                Text("Make & Model:")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
-                Text(vehicleList.makeAndModel ?? "")
-                    .font(.system(size: 20))
-                Spacer()
-            }
-            HStack(spacing: 10){
-                
-                Text("Car Type:")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
-                Text(vehicleList.carType ?? "")
-                    .font(.system(size: 20))
-                Spacer()
-            }
-            HStack(spacing: 10){
-                
-                Text("Color:")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
-                Text(vehicleList.color ?? "")
-                    .font(.system(size: 20))
-                Spacer()
-
-            }
+            PageView(pages: [
+                FirstDetalView(vehicleList: vehicleList, currentPage: 0, viewModel: viewModel),
+                FirstDetalView(vehicleList: vehicleList, currentPage: 1, viewModel: viewModel)
+            ], currentPage: $currentPage)
             Spacer()
-        }.padding(20)
-        .frame(width: UIScreen.screenWidth-40,height: UIScreen.screenHeight-50)
-
+            if currentPage == 0{
+                Text(RidesConstant.swipeMsg)
+                    .foregroundColor(.red.opacity(0.8))
+            }
+        }
+        .padding(20)
+        .onAppear(perform: {
+            self.viewModel.calculateCarbonEmmission(kiloMeter: Double(vehicleList.kilometrage ?? 0))
+        })
     }
 }
 

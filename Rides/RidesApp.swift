@@ -13,7 +13,7 @@ struct RidesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            //MARK: Dependency Inversion achived by injecting dependency from here (SOLID)
+            //MARK: Dependency Inversion achieved by injecting dependency from here (SOLID)
             VehicleListView()
                 .environmentObject(vm)
         }

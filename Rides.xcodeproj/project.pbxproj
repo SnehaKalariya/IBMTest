@@ -26,6 +26,10 @@
 		62D8F5A02AB89519005E37AF /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F59F2AB89519005E37AF /* CommonExtensions.swift */; };
 		62D8F5A92AB89FEF005E37AF /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F58F2AB74E23005E37AF /* WebServices.swift */; };
 		62D8F5AA2AB8A095005E37AF /* VehicleListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F5852AB748F4005E37AF /* VehicleListResponse.swift */; };
+		62D8F5AE2AB8E63B005E37AF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F5AD2AB8E63B005E37AF /* PageView.swift */; };
+		62D8F5B02AB8EC05005E37AF /* FirstDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F5AF2AB8EC05005E37AF /* FirstDetalView.swift */; };
+		62D8F5B42AB90050005E37AF /* VehicleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F5B32AB90050005E37AF /* VehicleListViewModelTests.swift */; };
+		62D8F5B62AB907A9005E37AF /* VehicleDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F5B52AB907A9005E37AF /* VehicleDetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		62D8F59B2AB7DDBC005E37AF /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 		62D8F59D2AB893E2005E37AF /* VehicleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCell.swift; sourceTree = "<group>"; };
 		62D8F59F2AB89519005E37AF /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		62D8F5AD2AB8E63B005E37AF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		62D8F5AF2AB8EC05005E37AF /* FirstDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetalView.swift; sourceTree = "<group>"; };
+		62D8F5B32AB90050005E37AF /* VehicleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModelTests.swift; sourceTree = "<group>"; };
+		62D8F5B52AB907A9005E37AF /* VehicleDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				62D8F55E2AB6AE94005E37AF /* RidesTests.swift */,
+				62D8F5B32AB90050005E37AF /* VehicleListViewModelTests.swift */,
+				62D8F5B52AB907A9005E37AF /* VehicleDetailViewModelTests.swift */,
 			);
 			path = RidesTests;
 			sourceTree = "<group>";
@@ -227,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				62D8F5972AB7D437005E37AF /* VehicleDetailView.swift */,
+				62D8F5AD2AB8E63B005E37AF /* PageView.swift */,
+				62D8F5AF2AB8EC05005E37AF /* FirstDetalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,10 +381,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D8F5B02AB8EC05005E37AF /* FirstDetalView.swift in Sources */,
 				62D8F5982AB7D437005E37AF /* VehicleDetailView.swift in Sources */,
 				62D8F54E2AB6AE8C005E37AF /* RidesApp.swift in Sources */,
 				62D8F58D2AB74D6E005E37AF /* NetworkServiceFactory.swift in Sources */,
 				62D8F5932AB75A9B005E37AF /* RidesConstants.swift in Sources */,
+				62D8F5AE2AB8E63B005E37AF /* PageView.swift in Sources */,
 				62D8F59C2AB7DDBC005E37AF /* RadioButtonView.swift in Sources */,
 				62D8F59A2AB7D46C005E37AF /* VehicleDetailViewModel.swift in Sources */,
 				62D8F5862AB748F4005E37AF /* VehicleListResponse.swift in Sources */,
@@ -389,8 +403,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D8F5AA2AB8A095005E37AF /* VehicleListResponse.swift in Sources */,
+				62D8F5B42AB90050005E37AF /* VehicleListViewModelTests.swift in Sources */,
 				62D8F55F2AB6AE94005E37AF /* RidesTests.swift in Sources */,
 				62D8F5A92AB89FEF005E37AF /* WebServices.swift in Sources */,
+				62D8F5B62AB907A9005E37AF /* VehicleDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
