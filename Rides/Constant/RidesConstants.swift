@@ -6,9 +6,10 @@
 //
 
 import Foundation
+
 struct RidesConstant{
     static let baseUrl = "https://random-data-api.com/api/"
-    static var vehicleListUrl = "vehicle/random_vehicle?size="
+    static let vehicleListUrl = "vehicle/random_vehicle?size="
     static let apiErrorMsg = "Something went wrong! Please try again later."
     static let alertMsg = "Please enter number between 1 to 100"
     static let carbonEmission = "Estimated Carbon Emmission"

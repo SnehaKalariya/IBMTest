@@ -15,6 +15,7 @@ class VehicleDetailViewModel : ObservableObject, VehicleDetailViewModelProtocol{
     var carEM : Double = 0
     @Published var carEMStr : String = ""
     
+    //MARK: Calculating Carbon Emmission
     func calculateCarbonEmmission(kiloMeter:Double){
         if kiloMeter <= RidesConstant.kmRange{
             carEM = kiloMeter
@@ -22,10 +23,6 @@ class VehicleDetailViewModel : ObservableObject, VehicleDetailViewModelProtocol{
             let remainingKM = kiloMeter - RidesConstant.kmRange
             carEM = RidesConstant.kmRange + (1.5*remainingKM)
         }
-        convertCarEMToString()
-    }
-    
-    func convertCarEMToString(){
-       carEMStr = "\(String(format: "%.0f", carEM)) units"
+        carEMStr = "\(String(format: "%.0f", carEM)) units"
     }
 }
